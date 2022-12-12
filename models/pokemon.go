@@ -52,7 +52,7 @@ type Image struct {
 
 type Video struct {
 	gorm.Model
-	PokemonID   int     `gorm:"primaryKey" json:"pokemonId"`
+	PokemonID   int     `gorm:"primaryKey" json:"pokemon_id"`
 	Pokemon     Pokemon `json:"pokemon"`
 	Video       string  `json:"video"`
 	Title       string  `json:"title"`

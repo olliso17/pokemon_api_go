@@ -160,3 +160,18 @@ func CreateImage(c *gin.Context) {
 	database.DB.Create(&image)
 	c.JSON(http.StatusOK, image)
 }
+
+// create Video
+func CreateVideo(c *gin.Context) {
+	var video models.Video
+
+	if err := c.ShouldBindJSON(&video); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": err.Error(),
+		})
+		return
+	}
+
+	database.DB.Create(&video)
+	c.JSON(http.StatusOK, video)
+}

@@ -30,5 +30,8 @@ func HandleRequest() {
 	// routes Images
 	r.POST("/images/create", controllers.CreateImage)
 
+	// routes Videos
+	r.POST("/videos/create", controllers.CreateVideo)
+
 	r.Run()
 }
